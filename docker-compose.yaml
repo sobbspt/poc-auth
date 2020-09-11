@@ -1,0 +1,22 @@
+version: '3'
+services:
+  gitlab:
+    container_name: gitlab
+    image: gitlab/gitlab-ce
+    ports:
+      - "80:80"
+      - "443:443"
+      - "22:22"
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins:lts-centos
+    ports:
+      - "8080:8080"
+  rancher:
+    container_name: rancher
+    image: rancher/rancher
+    ports:
+      - "8880:80"
+      - "8443:443"
+
+    
